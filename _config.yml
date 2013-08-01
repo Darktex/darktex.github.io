@@ -1,21 +1,21 @@
-title:            Site Title
-description:      Describe your website here.
+title:            Davide Testuggine
+description:      A personal website
 logo:             site-logo.png
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
-url:              http://your-website.com
+url:              http://darktex.github.io
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           Davide Testuggine
   avatar:         bio-photo.jpg
-  email:          you@email.com
+  email:          davide@testuggine.us
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
-  facebook:       
-  github:         
+  facebook:       eltexxo
+  github:         darktex
   stackexchange:  
-  linkedin:       
+  linkedin:       testuggine
   instagram:      
   flickr:         
   tumblr:         
