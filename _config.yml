@@ -1,6 +1,6 @@
 title:            Davide Testuggine
 description:      A personal website
-logo:             site-logo.png
+#logo:             
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
 #url:              http://darktex.github.io
