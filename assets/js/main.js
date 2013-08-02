@@ -322,6 +322,21 @@ window.matchMedia = window.matchMedia || (function( doc, undefined ) {
         return xmlhttpmethod;
       };
     })();
+
+  $(window).scroll(
+    {
+        previousTop: 0
+    }, 
+    function () {
+    var currentTop = $(window).scrollTop();
+    if (currentTop < this.previousTop) {
+        $("#site-nav").addClass("mynav");
+    }
+    else {
+        $("#site-nav").removeClass("mynav");
+    }
+    this.previousTop = currentTop;
+  });
   
   //translate CSS
   ripCSS();
