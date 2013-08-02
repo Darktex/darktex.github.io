@@ -3,7 +3,7 @@ description:      A personal website
 #logo:             
 disqus_shortname: 
 #Comment out url when working locally to resolve base urls correctly
-#url:              http://darktex.github.io
+#url:              http://testuggine.us
 
 # Owner/author information
 owner:
@@ -23,10 +23,10 @@ owner:
   google_plus:    
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
+google_analytics: UA-42906194-1
+google_verify:    G-ldBkp6Wl31_ytLaLbhEJr7LMVGPhpjVupqM4GZKXQ
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:      A179C40034ABAC472D7E94BBE768831E
 
 # Links to include in top navigation
 # For external links add external: true
