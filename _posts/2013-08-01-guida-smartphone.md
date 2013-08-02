@@ -4,6 +4,7 @@ category : blog
 tags : [italiano]
 image:
   feature: smartphones.png
+comments: true
 ---
 
 Questa guida va avanti ormai da Novembre 2012. Lo scopo è quello di raccogliere in un thread unico le scelte che normalmente consiglio quando qualcuno vuole prendere un giocattolino nuovo. Non ho la presunzione di dirvi che la mie scelte sono le migliori in tutti i casi, ma penso di poter dire serenamente di saper consigliare buone scelte. Notate che non sono un blogger professionista e pertanto __non__ ho provato tutti i modelli che vi consiglio, basandomi invece su recensioni e su hardware. Ciò detto, cerco sempre di sottolineare chiaramente quando ho provato un modello e quando no, e in generale _perché_ consiglio un modello piuttosto che un altro (hardware, software, esperienza diretta).
