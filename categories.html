@@ -1,0 +1,23 @@
+---
+layout: page
+permalink: /categories/index.html
+title: Category Index
+description: "An archive of posts sorted by category."
+---
+
+
+{% for category in site.categories %} 
+    <h2 id="{{ category[0] }}">{{ category[0] }}</h2>
+    <ul class="post-list">
+        {% assign pages_list = category[1] %}  
+        {% for post in pages_list %}
+            {% if post.title != null %}
+            {% if group == null or group == post.group %}
+            <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span></a></li>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
+    </ul>
+{% endfor %}
