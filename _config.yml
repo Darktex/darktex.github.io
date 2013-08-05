@@ -3,7 +3,7 @@ description:      A personal website
 #logo:             
 disqus_shortname: testuggine
 #Comment out url when working locally to resolve base urls correctly
-url:              http://testuggine.us
+#url:              http://testuggine.us
 
 # Owner/author information
 owner:
