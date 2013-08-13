@@ -20,7 +20,73 @@ The learning diagram as we left it:
 
 Now, we are going to expand on it a lot more.
 
-The first part that was overlooked last time was our error measure (or performance measure). Saying that we are doing well 
+###Error measure: theory
+
+The first part that was overlooked last time was our error measure (or performance measure). To us, "doing well" in the task of learning means that we find some function $$ h $$ for which $$ h \approx f $$, where $$ f $$ is the target function (unknown). However, you can say a function $$ h $$ is doing badly or well only with respect to a certain error metric.
+
+Therefore, there must exist (in general) an __error measure__ $$ E(h, f) $$ which is 0 when $$ h = f $$ and increseases if the two functions are "different". However, this definition is too general: $$ E(h, f) $$ is not a function itself, but a functional. It is not a object easy to deal with, and therefore we always resort to a _pointwise error metric_, $$e(h(\textbf{x}), f(\textbf{x})) $$, where $$ \textbf{x} $$ is a point.
+
+Examples of pointwise error are the squared error in regression and the binary error in classification:
+
+Squared Error: $$ e(h(\textbf{x}), f(\textbf{x})) = (h(\textbf{x}) - f(\textbf{x}))^2 $$
+
+Binary error: $$ e(h(\textbf{x}), f(\textbf{x})) = \begin{cases} 1 & \mbox{if }  h(\textbf{x}) \neq f(\textbf{x})  \\ 0  & \mbox{if } h(\textbf{x}) = f(\textbf{x}). \end{cases}   $$
+
+To obtain a overall $$ E(h, f) $$ we average the pointwise errors $$ e(h(\textbf{x}), f(\textbf{x})) $$ for all the examples we have got.
+
+In-sample error:
+
+$$ E_{in}(h) = \frac{1}{N} \sum_{i = 1}^m e(h(\textbf{x}_i), f(\textbf{x}_i)) $$
+
+where each example $$ \textbf{x}_i \in \Re^n $$ ($$n$$ is the number of features).
+
+Out-of-sample error:
+
+$$ E_{out}(h) = {\mathbb E}_x [e(h(\textbf{x}), f(\textbf{x}))] $$
+
+Notice that this time we don't get a specific point in the training set $$ \textbf{x}_i $$ but instead we pick a completely generic point $$ \textbf{x} \in X $$. Now, instead of a computer average on the sample, we compute the __expected value__ of the error by using the probability distribution generating the examples (like we did in [the previous article about feasibility](/notes/feasibility-of-learning)).
+
+The difference is subtle but crucial: $$ E_{in} $$ is the _frequency_ of errors (in the sample), while $$ E_{out} $$ is the _probability_ of error (in the input space $$ X $$).
+
+We can now add this to the learning diagram:
+
+![learning diagram](/images/notes/learningdiagram3.png)
+
+###Error measure in practice: precision and recall
+
+The error measure need not be symmetric. Sometimes __precision__ and __recall__ are much more important. For example:
+
+![error1](/images/notes/error1.png)
+
+In case a supermarket uses this to quickly identify customers without needing them to use cards, we can assume that pissing a customer is far more costly than giving them a discount he did not reject $$ \Rarrow $$ prefer __recall__ to precision.
+
+![error2](/images/notes/error2.png)
+
+In case the CIA uses this, they definitely prefer to shut down an authorized officer a few times (and have another one try instead if need be) than having an intruder stealing their secrets!
+
+![error3](/images/notes/error3.png)
+
+The take-home lesson is that __the error measure should be specified by the user__. Only the client knows what it wants.
+
+However, when this is not possible, you can resort to:
+
+__Plausible__ measures: squared error is the best when the noise is Gaussian
+
+__Friendly__ measures: closed-form solution, convex optimization.
+
+This causes another addition to the learning diagram:
+
+![learning diagram](/images/notes/learningdiagram4.png)
+
+###Noisy data
+
+
+
+![learning diagram](/images/notes/learningdiagram5.png)
+
+
+
+
 
 
 
