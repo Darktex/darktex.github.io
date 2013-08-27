@@ -1,8 +1,9 @@
 ---
 layout: post
 category : blog
-tags : [git, version control, software]
 title: "Introduzione a git"
+tags : [git, version control, software]
+comments: on
 ---
 
 Quando nomino _"Linus Torvalds"_, tutti sanno dirmi la sua creazione più di successo - parlo ovviamente del kernel Linux.

@@ -1,8 +1,9 @@
 ---
 layout: post
 category : blog
-tags : [git, guida, version control, software]
 title: "Guida pratica a git per chi lavora da solo"
+tags : [git, guida, version control, software]
+comments: on
 ---
 
 Questa guida si prefigge l'obiettivo di insegnarvi ad usare git dandovi una serie di "ricette pronte" e linkandovi agli spiegoni più sintetici che ho trovato, in modo da limitare il tempo perso nei pipponi per invece iniziare ad usarlo subito.
