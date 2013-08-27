@@ -16,7 +16,7 @@ Dice la nota dell'autore:
 
 _"I would be especially pleased if my granting of the rights to distribute my books in this way was seen as my “millennium gift” to all those devoted readers who have kept the Kai flag flying high, through all the good times, and the not-so-good. It would make me very proud indeed if this enterprise laid the foundations of a lasting legacy, securing the longevity of Lone Wolf by making my creation freely and readily accessible to current and future online generations. For them, for us, for Sommerlund and the Kai. … "_ 
 
--- Joe Dever
+    -- Joe Dever
 
 Io da bambino ne avevo pochissimi, e nemmeno consecutivi per cui... Beh, me li sto godendo dal numero 1 :P
 

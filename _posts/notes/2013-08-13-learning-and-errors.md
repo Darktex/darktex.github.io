@@ -126,8 +126,8 @@ The first point is achieved through sound statistics about significativity of th
 
 Learning is thus split into 2 questions:
 
-1. Can we make sure that $$E_{out}(g)$$ is close enough to $$E_{in}(g)$$?
-2. Can we make $$E_{in}(g)$$ small enough?
+1. Can we make sure that $$E_{out}(g)$$ is close enough to $$E_{in}(g)$$? This is also called __generalization__.
+2. Can we make $$E_{in}(g)$$ small enough? This is also called __fitness__ of the model.
 
 ###Next steps
 
