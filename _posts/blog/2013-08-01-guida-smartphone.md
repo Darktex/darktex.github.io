@@ -9,10 +9,18 @@ comments: true
 
 Questa guida va avanti ormai da Novembre 2012. Lo scopo è quello di raccogliere in un thread unico le scelte che normalmente consiglio quando qualcuno vuole prendere un giocattolino nuovo. Non ho la presunzione di dirvi che la mie scelte sono le migliori in tutti i casi, ma penso di poter dire serenamente di saper consigliare buone scelte. Notate che non sono un blogger professionista e pertanto __non__ ho provato tutti i modelli che vi consiglio, basandomi invece su recensioni e su hardware. Ciò detto, cerco sempre di sottolineare chiaramente quando ho provato un modello e quando no, e in generale _perché_ consiglio un modello piuttosto che un altro (hardware, software, esperienza diretta).
 
-Noterete che con questa versione della guida è stata totalmente ridefinita la fascia media: i terminali che prima trovavate nella parte alta della "fascia bassa" (sui 130-150€) oggi costituiscono la fascia media, e la fascia media di ieri è totalmente scomparsa. Il motivo è che non riesco a giustificare l'acquisto di un S3 mini o di un Lumia 620 a 200€ quando i telefoni di Huawei hanno quasi lo stesso hardware a 70€ di meno. 70€ sono soldi e non credo che sia giusto sprecarli per qualche MB di RAM in più (oltretutto, la CPU di S Advance ed S3 Mini è più scarsa di quella di Huawei Y300). Quindi ho deciso di consigliarvi di andare diretti per il Nexus 4, senza pensieri, oppure di risparmiare soldi.
+#What's new
+Google ha abbassato di 100€ il prezzo di Nexus 4, portandolo a cifre INCREDIBILI[^abbassamentoNexus].
+
+Purtroppo però l'abbassamento di prezzo riguarda solo gli acquisti dal Play Store (gli unici che Google può controllare), e in Italia non c'è. In compenso ci sono parecchi siti web (elencati nel paragrafo dedicato al N4 più avanti) che sono riusciti a seguire i prezzi del Play Store per cui vi consiglio di monitorarli giornalmente finché non si adeguano, non penso ci vorrà troppo.
+
+Inutile dire che se non arrivate a 249€ di budget, potete __benissimo__ vivere con il Nexus da 8 GB e spendere 199€. Se lo trovate a quella cifra, anche se volevate spendere di meno fate lo sforzo. 60€ di differenza con gi Huawei non sono tanti soldi e valgono ogni centesimo.
+
+[^abbassamentoNexus]: Fonte: <http://www.androidworld.it/2013/08/28/google-taglia-il-prezzo-del-nexus-4-su-play-device-179297/> 
 
 
-# FASCIA BASSA 
+
+#FASCIA BASSA 
 
 Questa è la fascia più economica e si accetta ogni genere di sacrificio pur di avere lo smartphone. Il traguardo per voi è di avere un telefono che legga le email, vi faccia usare Whatsapp, Google Hangouts e/o Viber e vi faccia andare occasionalmente su Facebook e su qualche sito web, anche facendovi attendere parecchio tra un caricamento e l'altro.
 
@@ -29,7 +37,7 @@ Questa è la fascia più economica e si accetta ogni genere di sacrificio pur di
          
     + COMMENTO: Questo cellulare ha sconfitto una leggenda, cioè il ZTE Blade che era rimasto nei miei consigli per oltre due anni. Questo telefono lo annichilisce in tutto, sia lato hardware (anche se non di molto) sia lato software. Non l'ho provato direttamente, ma a questa fascia di prezzo vince veramente per abbandono: non è che è il miglior telefono che possiate comprare a 59€, è proprio l'__unico__.
 
-# FASCIA MEDIA
+#FASCIA MEDIA
 
 Quando questa guida è iniziata questa fascia arrivava ai 250€. Oggi rimane sotto ai 150, segno dei tempi :-)
 
@@ -63,7 +71,7 @@ Quando questa guida è iniziata questa fascia arrivava ai 250€. Oggi rimane so
 
 1. __LG/Google Nexus 4__
 
-    _SnapDragon S4 Pro 1.5 GHz quad core, 2 GB RAM, 4.8' 1280x720, 8/16 GB ROM non espandibili, 300-330€ - vedi nota!_
+    _SnapDragon S4 Pro 1.5 GHz quad core, 2 GB RAM, 4.8' 1280x720, 8/16 GB ROM non espandibili, 199/249€ sul Play Store in Francia e Germania, variabile in Italia - vedi nota!_
 
     ![Nexus 4](http://android.caotic.it/files/2013/07/lg-nexus-411.jpg)
 
@@ -74,7 +82,7 @@ Quando questa guida è iniziata questa fascia arrivava ai 250€. Oggi rimane so
          
     + COMMENTO: Google ha rivoluzionato il mercato con questa bomba atomica. Questa intera guida è stata ristrutturata con una singola idea in mente: "Consiglia di comprarsi un Nexus 4 ad ogni costo, e solo se proprio non ci arrivano come soldi e hanno assoluto bisogno di uno smartphone, consiglia qualcosa che costi veramente tanto di meno in modo da bilanciare". Questo telefono vale ogni centesimo dei 200€ di differenza che dovete pagare rispetto ad un Y300 o ad un W1: avrete Android come è stato concepito, senza bloatware e senza il minimo lag. Potrete giocare a ciò che volete con la grafica a palla, avrete gli aggiornamenti garantiti ancora per almeno un anno e mezzo prima di tutti gli altri telefoni e se siete smanettoni avete una delle community di XDA più attive in fatto di modding. Non esiste una sola ragione per cui non mi sentirei di consigliarvi questo telefono, se non il mese: quando scrivo è già Agosto e a Novembre uscirà quello nuovo in America, e per Natale dovrebbe essere acquistabile anche qui. Non che questo diventerà lento a Novembre, ma se si può aspettare sicuramente ha senso prendere un telefono molto vicino alla sua uscita. Allo stesso modo però, se avete bisogno oggi comprate veramente senza la minima remora. Io ne posseggo uno per il quale ho lasciato il mio iPhone 5, e tuttoggi non ho rimpianti.
 
-    + NOTA: Il prezzo è basso solo se acquistato tramite Google, che lo sovvenziona. Se lo prendete tramite i canali tradizionali (tipo Mediaworld) lo andate a pagare oltre 450€. Io ho acquistato il mio sul sito web [glistockisti.it](http://www.glistockisti.it) e mi sono trovato bene, ma non ci sono solo loro: vi consiglio di guardarvi [eBay](http://www.ebay.it/sch/Cellulari-e-smartphone-/9355/i.html?_from=R40&_nkw=nexus+4&_dmpt=Smartphone&Marca=LG&rt=nc) e siti come [trovaprezzi.it](http://www.trovaprezzi.it/categoria.aspx?libera=nexus+4&id=7&prezzomin=&prezzomax=) prima di decidere. Se andate in USA sappiate che il cambio è molto favorevole! Lo paghereste 349$ che sono 265€.
+    + NOTA: Il prezzo è basso solo se acquistato tramite il Play Store di Google, che lo sovvenziona. Se lo prendete tramite i canali tradizionali (tipo Mediaworld) lo andate a pagare oltre 450€. Io ho acquistato il mio sul sito web [glistockisti.it](http://www.glistockisti.it) e mi sono trovato bene, ma non ci sono solo loro: vi consiglio di guardarvi [eBay](http://www.ebay.it/sch/Cellulari-e-smartphone-/9355/i.html?_from=R40&_nkw=nexus+4&_dmpt=Smartphone&Marca=LG&rt=nc) e siti come [trovaprezzi.it](http://www.trovaprezzi.it/categoria.aspx?libera=nexus+4&id=7&prezzomin=&prezzomax=) prima di decidere. Se andate in USA sappiate che il cambio è molto favorevole! Lo paghereste 249$ che sono 186€ (assurdo!!).
 
 
 # CASI PARTICOLARI
