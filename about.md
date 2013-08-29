@@ -8,7 +8,7 @@ tags: [Davide Testuggine, Genova, Mountain View, Cambridge, software]
 
 <img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo pull-right">
 
-Hi! My name is Davide Testuggine and I am a software engineer, a sporadic blogger, a videogame geek, and overall thinker.
+Hi! My name is Davide Testuggine and I am a software engineer, a sporadic blogger, a video- (and board-) game geek, and somebody that likes critical thinking.
 
 I obtained my Bachelor's Degree in Ingegneria Informatica (Computer Engineering) at Università di Genova (University of Genoa) in my hometown in Italy, and my Master's Degree at the University of Cambridge (MPhil in Advanced Computer Science).
 
@@ -20,7 +20,7 @@ I am currently working for Microsoft Silicon Valley as a Software Engineer in De
 
 When I am not trying to outperform Google, if in town, I can be found playing Dota 2 online, or drafting at the local Magic: The Gathering store. When on holiday, I can either be sleeping on a seaside or hiking in the Alps.
 
-- You can find more about me and what I do on [LinkedIn](www.linkedin.com/testuggine).
+- You can find more about me and what I do on [LinkedIn](http://www.linkedin.com/in/testuggine). You can also download my latest and greatest resume from there!
 
 - To email me, try the most obvious address you can think of, knowing that this domain is also an email domain and, incidentally, my family name.
 

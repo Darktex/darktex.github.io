@@ -30,9 +30,9 @@ Nota per chi ha Windows: non dimenticatevi di espandere il riquadro "Need a quic
 
 Non abbiamo ancora finito! Ora inserite questi comandi:
 
-`git config color.ui true`
+`git config --global color.ui true`
 
-`git config format.pretty oneline`
+`git config --global format.pretty oneline`
 
 `git config --global core.editor nano`
 
