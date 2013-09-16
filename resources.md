@@ -1,11 +1,11 @@
 ---
 layout: page
 permalink: /resources/index.html
-title: About the Jekyll Theme
+title: Resources
 tags: [resources]
 ---
 
-This is stuff I made you can find of use.
+This is stuff I made you may find somehow useful.
 
 #Italiano
 - [Slide su Intelligenza Artificiale fatte per un talk al Liceo Cassini di Genova](/Resources/AI.pdf). Si raccomanda l'uso di Acrobat Reader per vedere i video embedded da Youtube.
