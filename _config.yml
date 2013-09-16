@@ -37,8 +37,8 @@ links:
     url: /about
   - title: Blog
     url: /blog
-  - title: Projects
-    url: /projects
+  - title: Resources
+    url: /resources
   - title: Notes
     url: /notes
 
@@ -67,3 +67,11 @@ kramdown:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec"]
+
+languages:
+    en:
+      name: 'English'
+      img: "/images/UKUS.png"
+    it:
+      name: 'Italiano'
+      img: "/images/ITA.png"

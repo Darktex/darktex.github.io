@@ -4,6 +4,7 @@ category : notes
 title: Feasibility of learning
 tags : [machine learning, caltech course, mooc]
 comments: on
+languages: en
 ---
 
 These notes are written in English and refer to the fantastic Caltech online course you can find here: <http://work.caltech.edu/telecourse.html>. It is also worth noting you can find it on iTunes U, and if you have an iPad this makes a fantastic combo :-) The book is here: <http://www.amazon.com/gp/product/1600490069>. I make ample use of Yaser's material, including linking the relevant lecture PDF in each note and using his pictures (this is much faster than drawing stuff myself). Please note this is just for personal use and I give ALL the due credit to him!
@@ -23,7 +24,7 @@ To do that, we need a mathematical tool, __Hoeffding's inequality__. I failed to
 Here, we are just content with looking at the formula:
 
 
-$$ P(\| \mu - \nu \| > \epsilon) \leq 2 e^{-2 \epsilon^2 m} $$
+$$ P(\textbar \mu - \nu \textbar > \epsilon) \leq 2 e^{-2 \epsilon^2 m} $$
 
 ![bins](/images/notes/bins1.png)
 
@@ -84,8 +85,8 @@ The same can be said to our learning problem: if I have a set $$ H $$ containing
 
 We follow the very same reasoning: we want to know the probability of at least one failing.
 
-$$ {\mathbb P}[ \| E_{in}(g) - E_{out}(g) \| > \epsilon ] \leq \\ \hspace{30pt} {\mathbb P}[ \| E_{in}(h_1) - E_{out}(h_1) \| > \epsilon ]  \\  
-\hspace{30pt} \operatorname{OR}  {\mathbb P}[ \| E_{in}(h_2) - E_{out}(h_2) \| > \epsilon ]  \\\hspace{30pt} \operatorname{OR}  ... {\mathbb P}[ \| E_{in}(h_M) - E_{out}(h_M) \| > \epsilon ] $$
+$$ {\mathbb P}[ \textbar E_{in}(g) - E_{out}(g) \textbar > \epsilon ] \leq \\ \hspace{30pt} {\mathbb P}[ \textbar E_{in}(h_1) - E_{out}(h_1) \textbar > \epsilon ]  \\  
+\hspace{30pt} \operatorname{OR}  {\mathbb P}[ \textbar E_{in}(h_2) - E_{out}(h_2) \textbar > \epsilon ]  \\\hspace{30pt} \operatorname{OR}  ... {\mathbb P}[ \textbar E_{in}(h_M) - E_{out}(h_M) \textbar > \epsilon ] $$
 
 
 This can be bounded by the __union bound__[^unionbound], which intuitevely says that the maximum probability of at least an event occurring in N is when all the events are independent, in which case you just sum up the probabilities:
@@ -94,7 +95,7 @@ $$ {\mathbb P}\biggl(\bigcup_{i} A_i\biggr) \le \sum_i {\mathbb P}(A_i) $$
 
 Therefore:
 
-$$ {\mathbb P}[ \| E_{in}(g) - E_{out}(g) \| > \epsilon ] \le \sum_{i = 1}^M {\mathbb P}[ \| E_{in}(h_i) - E_{out}(h_i) \| > \epsilon ] \le \sum_{i = 1}^M 2 e^{-2 \epsilon^2 m} \le 2 M e^{-2 \epsilon^2 m} $$
+$$ {\mathbb P}[ \textbar E_{in}(g) - E_{out}(g) \textbar > \epsilon ] \le \sum_{i = 1}^M {\mathbb P}[ \textbar E_{in}(h_i) - E_{out}(h_i) \textbar > \epsilon ] \le \sum_{i = 1}^M 2 e^{-2 \epsilon^2 m} \le 2 M e^{-2 \epsilon^2 m} $$
 
 The conclusion may seem both awkward and obvious, but __the bigger the hypothesis set, the higher the probability of at least one function being very bad__. In the event that we have an infinite hypothesis set, of course this bound goes to infinity and tells us nothing new.
 

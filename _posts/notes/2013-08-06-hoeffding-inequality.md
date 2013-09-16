@@ -3,6 +3,7 @@ layout: post
 category : notes
 tags : [maths, machine learning, theory]
 title: Hoeffding's inequality
+languages: en
 ---
 
 Consider a simple problem: we have a jar containing some red and blue balls like this:

@@ -5,6 +5,7 @@ tags : [smartphone, frequenze, comprare smartphone in usa]
 title: "Smartphone e frequenze"
 image:
   feature: frequency.jpg
+languages: it
 ---
 
 Ultimamente ho avuto a che fare con l’annoso “problema delle frequenze" dei telefoni. “Perché dovrebbe interessarmi?" potreste chiedermi - dopotutto ogni terminale EU funziona comodamente sulle linee italiane. È vero, ma ci sono due motivi per cui vale la pena saperne qualcosa:

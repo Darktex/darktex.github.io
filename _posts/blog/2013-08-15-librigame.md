@@ -4,6 +4,7 @@ category : blog
 tags : [librigame, lupo solitario, awesome]
 title: "Librigame gratis in formato digitale!"
 comments: on
+languages: it
 ---
 
 I nati nel 1989 (e anni limitrofi) di una certa nerdezza ricorderanno i fantastici [LIBRIGAME](http://it.wikipedia.org/wiki/Librogame).
