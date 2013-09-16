@@ -18,4 +18,3 @@ This is stuff I made you can find of use.
 #English
 
 - [Talk on Godel's theorem](/Resources/Goedel.pdf) as part of my coursework for the Automated Reasoning course in Cambridge.
-- 
