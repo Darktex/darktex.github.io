@@ -124,7 +124,7 @@ Questi sono per chi cerca una funzione specifica ed è disposto a fare sacrifici
 ### SCHERMO GIGANTE (Phablet)
 1. __Samsung Galaxy Note III__
 
-    _SnapDragon 800 2.3 GHz quad core, 2 GB RAM, 5.7' 1920x1080 (388 ppi), 32/64 GB ROM espandibili microSDXC fino a 64 GB, ~500€_
+    _SnapDragon 800 2.3 GHz quad core, 3 GB RAM, 5.7' 1920x1080 (388 ppi), 32/64 GB ROM espandibili microSDXC fino a 64 GB, ~500€_
 
     ![Galaxy Note 2](http://phandroid.s3.amazonaws.com/wp-content/uploads/2013/09/Samsung-Galaxy-Note-3-front-back.jpg-640x488.jpg)
 
