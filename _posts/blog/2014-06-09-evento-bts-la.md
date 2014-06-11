@@ -166,6 +166,10 @@ Concludo ripetendo il mio invito ad organizzare eventi per vedere il TI insieme 
 
 Infine, per chi andrà ad ESL One o in altri futuri eventi con i giocatori di Dota, consiglio di organizzarsi bene per fare la coda per i Na'Vi perché mi hanno detto che non stanno mai fino alla fine dell'evento e quindi rischiate di fare la coda per nulla.
 
+# Appendice: le foto
+
+Ho messo tutte le foto su Google+ (che me le fa sharare alla risoluzione originale) in un album condiviso pubblicamente. Lo trovate qui: [https://plus.google.com/116595203335444054084/posts/75FkT1Y2MLB](https://plus.google.com/116595203335444054084/posts/75FkT1Y2MLB).
+
 [^video]: Tra l'altro io Zyori che faceva vedere la roba lo avevo anche visto nel pomeriggio, ma ero su Skype con la mia ragazza e aveva il volume basso, quindi ho semplicemente assunto che la roba la avrebbero regalata con un qualche giveaway online, oppure boh venduta.
 
 [^distanze]: Eh sì, gli Stati Uniti sono enormi e dalla Silicon Valley (dove vivo) al posto dell'evento (un pochino a Nord di LA) ci sono 600 Km circa: [https://goo.gl/maps/fzsSj](https://goo.gl/maps/fzsSj). L'altra cosa che stupisce tutti gli europei la prima volta che vengono (me incluso) è che la larga parte del territorio degli USA è completamente vuota e disabitata. Il panorama lungo tutto il tragitto è all'incirca [questo](http://www.ontheroadin.com/baja/0%20mexico%20highway%205.jpg) per tutte le 5 ore di viaggio.
