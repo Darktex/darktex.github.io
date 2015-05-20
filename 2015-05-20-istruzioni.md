@@ -10,6 +10,7 @@ permalink: /indicazioni/index.html
 
 ### Indicazioni per chi viene da Est
 
+
 - Uscite a Genova Est
 - Andate fino all'autosilo Piccapietra ([link Google Maps](https://www.google.it/maps/dir/44.4381216,8.9388619/Autopark+Piccapietra+%28SP+A.%29,+Largo+San+Giuseppe,+Genova,+GE/@44.4248789,8.9239831,14z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x12d343e86b6ec9b3:0xa5ad62b945c6aac8!2m2!1d8.936763!2d44.408014!3e0)). Costa 2.20€ all'ora.
 - Andate a piedi fino a Palazzo Tursi ([link Google Maps](https://www.google.it/maps/dir/Autopark+Piccapietra+%28SP+A.%29,+Largo+S.+Giuseppe,+16121+Genova/Palazzo+Doria+Tursi,+Via+Garibaldi,+Genova/@44.409648,8.9325858,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x12d343e86b6ec9b3:0xa5ad62b945c6aac8!2m2!1d8.936763!2d44.408014!1m5!1m1!1s0x12d343e6896d1cd9:0xb507ed5992cbe319!2m2!1d8.932598!2d44.411282!3e2). Sono 8 minuti di camminata.
