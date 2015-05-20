@@ -3,13 +3,13 @@ description:      A personal website
 #logo:             
 disqus_shortname: testuggine
 #Comment out url when working locally to resolve base urls correctly
-#url:              http://testuggine.us
+url:              http://testuggine.ninja
 
 # Owner/author information
 owner:
   name:           Davide Testuggine
   avatar:         my-photo.jpg
-  email:          davide@testuggine.us
+  email:          davide@testuggine.ninja
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       eltexxo
