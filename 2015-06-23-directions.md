@@ -4,7 +4,7 @@ permalink: /directions/index.html
 
 ---
 
-# Ceremony Palazzo Tursi
+# Palazzo Tursi
 ![Tursi](http://www.opengenova.org/wikilovesmonuments/files/2014/07/salone-tursi.jpg)
 [Palazzo Tursi](http://it.wikipedia.org/wiki/Palazzo_Doria-Tursi) is at this address: [Via Garibaldi 9, 16124 Genova](https://www.google.it/maps/place/Palazzo+Doria+Tursi/@44.411282,8.932598,17z/data=!4m2!3m1!1s0x0000000000000000:0xb507ed5992cbe319?hl=it).
 
