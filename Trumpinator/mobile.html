@@ -18,8 +18,8 @@
 
             .talkbubble {
                 position: relative;
-                width: 300px;
-                height: 125px;
+                width: 70%;
+                height: 275px;
 
                 padding: 10px;
                 border-radius: 5px;
@@ -30,10 +30,11 @@
             .talkbubble:before {
                 content:"";
                 position: absolute;
-                right: 100%;
-                top: 26px;
+                top: 100%;
+                left: 26px;
                 width: 0;
                 height: 0;
+                transform: rotate(270deg);
 
                 border-top: 13px solid transparent;
                 border-right: 26px solid lightblue;
@@ -42,10 +43,10 @@
 
             .talkbubble textarea {
                 position: inherit;
-                width: inherit;
+                width: 100%;
                 height: inherit;
                 background: inherit;
-
+                font-size: 30px;
                 margin: 0;
                 padding: 0;
 
@@ -144,7 +145,7 @@
 
             // prediction params
             var sample_softmax_temperature = 1.0; // how peaky model predictions should be
-            var max_chars_gen = 600; // max length of generated sentences
+            var max_chars_gen = 300; // max length of generated sentences
 
             // various global var inits
             var epoch_size = -1;
@@ -659,16 +660,17 @@
     <br/>
     <br/>
     <div id="content">
-        <div id = trumpimage style="float:left;">
-            <img id="Trump" src="TrumpMobile.jpg">
-        </div>
-        <div>
         <div class="talkbubble" style="float:right;">
             <textarea class="talkbubble" id="ti" onfocus="this.value=''">I don</textarea>
-            <!-- <div id="runinfo">INIT</div> -->
-            </div>
+            <br/>
+        </div>
+        <div>
             <button id="predictB"  class="abutton" style="clear: both; float: right">Hear me out!</button>
         </div>
+        <div id = trumpimage style="clear:both;float:left;">
+            <img id="Trump" src="TrumpMobile.jpg">
+        </div>
+
         <br/>
 
     </div>
