@@ -5,6 +5,32 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 {% include head.html %}
+
+<style>
+.entry-content p>a {
+    color: #2077b2;
+}
+.entry-content p>a:visited {
+    color: #2077b2;
+}
+.entry-content p {
+    line-height: 150%;
+}
+
+.entry-content li {
+    line-height: 150%;
+    margin: 0 0 10px 0;
+}
+
+.entry-content li>a {
+    color: #2077b2;
+}
+.entry-content li>a:visited {
+    color: #2077b2;
+}
+
+
+</style>
 </head>
 
 <body id="post" itemscope itemtype="http://schema.org/WebPage">
@@ -20,7 +46,7 @@
         <span class="entry-tags">{% for tag in page.tags %}<a href="{{ site.url }}/tags.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</span>
         <h1 class="entry-title" itemprop="name">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}
         {% if page.languages %}
-          &nbsp; 
+          &nbsp;
           {% for id in page.languages %}
             <img alt="{{ site.languages[id]['name'] }}" src="{{ site.languages[id]['img'] }}" width="80px" height="auto"/>
           {% endfor %}
@@ -57,7 +83,7 @@
   </footer>
 </div><!-- /.footer-wrapper -->
 
-{% include scripts.html %}	        
+{% include scripts.html %}
 
 </body>
 </html>
