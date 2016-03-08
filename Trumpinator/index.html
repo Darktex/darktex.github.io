@@ -14,7 +14,16 @@
 
     })(); </script>
     <script src="//fast.eager.io/wSV4iZc7UK.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+        ga('create', 'UA-42906194-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 
     <style>
 
@@ -31,7 +40,7 @@
 
         #content {
             position: absolute;
-            top: 70%;
+            top: 50%;
             left: 75%;
             transform: translate(-50%, -50%);
             width: 23%;
@@ -49,47 +58,93 @@
             background-color: white;
         }
 
+        .ui-slider-handle {
+            height: 200%;
+            width: 200%;
+        }
+
         .talkbubble {
 
             text-align: left;
             height:90%;
             padding: 10px;
             border-radius: 5px;
-            border: solid black;
             background: white;
+            /* outer shadows  (note the rgba is red, green, blue, alpha) */
+
+            -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+
+
+            /* rounded corners */
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+
+
         }
 
-        .talkbubble:before {
-            content:"";
-            position: absolute;
-            right: 100%;
-            top: 90%;
-            width: 0;
-            height: 0;
+        .talkbubble:after {
+            background-color: white;
+            box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+            content: "\00a0";
+            display: block;
+            height: 15%;
+            width:10%;
 
-            border-top: 13px solid transparent;
-            border-right: 26px solid black;
-            border-bottom: 13px solid transparent;
+            position: absolute;
+            left: -5%;
+            top: 60%;
+            transform:             rotate( 45deg );
+            -moz-transform:    rotate( 45deg );
+            -ms-transform:     rotate( 45deg );
+            -o-transform:      rotate( 45deg );
+            -webkit-transform: rotate( 45deg );
         }
 
         .talkbubble textarea {
 
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
             margin: 0;
             padding: 0;
-            font-family:"Times New Roman", Times, serif;
+            font-family:"Arial", Times, serif;
             font-size: 26px;
             width: 100%;
+            height:100%;
             border: none;
         }
 
-        .donaldslider {;
-            width: 100%;
-            background-color: white;
+        .donaldslider {
+            text-align: left;
+            height:60%;
+            padding: 10px;
+            border-radius: 5px;
+            background: white;
+            /* outer shadows  (note the rgba is red, green, blue, alpha) */
+
+            -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+
+
+            /* rounded corners */
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+
+        .myfont {
+            font-family:"Arial", Times, serif;
+            font-size: 22px;
         }
 
         #predictB {
             position: relative;
-            right: -80%;
+            right: -70%;
+            width:30%;
+            height:15%;
         }
 
         h1 {
@@ -132,7 +187,8 @@
             margin: 5px;
         }
         .theslider {
-            width:90%;
+            width:70%;
+            height: 150%;
             display: inline-block;
         }
         .slider_value {
@@ -163,11 +219,33 @@
         #intro {
             text-align: justify;
         }
+        .typed-cursor{
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
     </style>
-    <link href="external/jquery-ui.min.css" rel="stylesheet">
 
-    <script src="external/jquery-1.8.3.min.js"></script>
-    <script src="external/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="src/typed.js"></script>
 
     <script src="src/recurrent.js"></script>
     <script src="src/vis.js"></script>
@@ -176,7 +254,7 @@
 
         // prediction params
         var sample_softmax_temperature = 1.0; // how peaky model predictions should be
-        var max_chars_gen = 600; // max length of generated sentences
+        var max_chars_gen = 300; // max length of generated sentences
 
         // various global var inits
         var epoch_size = -1;
@@ -531,28 +609,6 @@
 
             if (tick_iter % 100 == 0 && !isInitialized)
                 loadPretrained();
-            if(tick_iter % 50000 === 0) {
-                // draw samples
-                $('#samples').html('');
-                for(var q=0;q<1;q++) {
-                    var pred = predictSentence(model, true, sample_softmax_temperature);
-                    //var pred_div = '<div class="apred">'+pred+'</div>'
-                    $('#ti').val(pred);
-                }
-            }
-            if(tick_iter % 10000 === 0) {
-                // draw argmax prediction
-                $('#argmax').html('');
-                var pred = predictSentence(model, false);
-                var pred_div = '<div class="apred">'+pred+'</div>'
-                $('#argmax').append(pred_div);
-
-                // keep track of perplexity
-                //$('#epoch').text('epoch: ' + (tick_iter/epoch_size).toFixed(2));
-                //$('#ppl').text('perplexity: ' + cost_struct.ppl.toFixed(2));
-                $('#ticktime').text('forw/bwd time per example: ' + tick_time.toFixed(1) + 'ms');
-
-            }
         }
 
         var gradCheck = function() {
@@ -610,7 +666,7 @@
 
             for(var q=0;q<1;q++) {
                 var pred = predictSentence(model, true, sample_softmax_temperature);
-                $('#ti').val(pred);
+                return pred;
             }
             // draw argmax prediction
 
@@ -648,8 +704,13 @@
 
             $("#predictB").click(function() {
                 //$('#runinfo').text('RUNNING');
-                makePrediction();
-                //$('#runinfo').text('AFTER');
+                prediction = makePrediction();
+                $("#ti").typed({
+                    strings: prediction.split("."),
+                    typeSpeed: 0
+                });
+                $("#ti").val(prediction);
+
             });
 
             $("#savemodel").click(saveModel);
@@ -661,7 +722,7 @@
 
             $("#learn").click(); // simulate click on startup
             $("#loadpretrained").click();
-            $("#predictB").click();
+
 
             //$('#gradcheck').click(gradCheck);
 
@@ -675,6 +736,19 @@
                     $("#temperature_text").text( sample_softmax_temperature.toFixed(2) );
                 }
             });
+
+            $( "#instructionsDiv" ).dialog({
+                autoOpen: false,
+                modal: true,
+                minWidth: 1000
+            });
+
+            $("#instructionsLink").click(function(e) {
+                e.preventDefault();
+                $("#instructionsDiv").dialog("open");
+            });
+
+
         });
 
     </script>
@@ -683,13 +757,10 @@
 <body>
 
 <div id="wrap">
-    <h1 style="background-color: white; text-align: center">Drumpfinator</h1>
-    <div id="instructions"> Trumpinator is a bot that uses state of the art Artificial Intelligence techniques to simulate Donald Trump. <br/>
-    How it works: write a sentence, and Drumpfinator will finish it for you in true Trump style. <br/>
-    Have you ever wished you had your own personal robot Trump? Now you do!</div>
+
     <div id="content">
         <div class="talkbubble">
-        <textarea class="talkbubble" id="ti" onfocus="this.value=''">I don</textarea>
+        <textarea class="talkbubble" id="ti" onfocus="this.value=''">Click here and type to start a sentence, and let DRUMPF-9000 finish it in true Drumpf style!</textarea>
         <!-- <div id="runinfo">INIT</div> -->
         </div>
 
@@ -697,6 +768,7 @@
     <button id="learn" class="abutton" style="display: none;">learn/restart</button>
     <button id="resume" class="abutton" style="display: none;">resume</button>
     <button id="stop" class="abutton" style="display: none;">pause</button>
+
     <!-- <button id="gradcheck">gradcheck</button> -->
   <textarea id="newnet" style="width:1px; height: 1px;width: 1px; display:none;">
 
@@ -710,16 +782,26 @@ regc = 0.000001; // L2 regularization strength
 learning_rate = 0.01; // learning rate
 clipval = 5.0; // clip gradients at this value
   </textarea>
-  <button id="predictB"  class="abutton">Hear me out!</button>
+  <button id="predictB"  class="abutton myfont">Hear me out!</button>
 
     <div id="status" class="donaldslider">
 
 
         <div id="controls">
             <div class="aslider">
-                <div class="slider_header">Temperature slider: lower setting will generate more likely predictions, but you'll see more of the same common words again and again. Higher setting will generate less frequent words but you might see more spelling errors.</div>
-                <div class="theslider" id="temperature_slider"></div>
-                <div class="slider_value" id="temperature_text">0.40</div>
+                <!--div class="slider_header myfont">Temperature slider: lower setting will generate more likely predictions,
+                    but you'll see more of the same common words again and again. Higher setting will generate less
+                    frequent words but you might see more spelling errors.</div-->
+                <br/>
+                <br/>
+                <div style="float:left"><img src="miniTrump.png"/></div>
+                <div class="theslider" id="temperature_slider" style="position:relative;bottom: 40%;left:10%;width:50%;"></div>
+                <div style="float:right"><img src="bigTrump.png"/></div>
+                <br/>
+                <div class="slider_value" id="temperature_text" style="position:relative;top:50%;left:50%;">0.40</div>
+                <br/>
+                <span style="clear:both;float:left;"><a id="instructionsLink" class="myfont" href="http://testuggine.ninja/blog/torch-conversion">Instructions</a></span>
+                <span style="float:right;"><a class="myfont" href="http://testuggine.ninja/blog/torch-conversion">The science behind this</a></span>
             </div>
         </div>
         <div id="samples"></div>
@@ -733,6 +815,16 @@ clipval = 5.0; // clip gradients at this value
 
     </div>
 </div>
+</div>
+
+<div id="instructionsDiv" hidden="hidden" title="Instructions"><p>DRUMPF-9000 is an artificial Neural Network that learned to simulate Donald Trump just by reading the transcripts of his campaign speeches. </p>
+    <br/>
+    <p>How it works: write a sentence, and DRUMPF-9000 will finish it for you in true Trump style. </p>
+    <br/>
+    <p>Temperature slider: lower setting will generate more likely predictions,
+        but you'll see more of the same common words again and again. Higher setting will generate less
+        frequent words but you might see more spelling errors.</p>
+    <p>Have you ever wished you had your own personal robot Trump? Now you do!</p>
 </div>
 
 </body>
