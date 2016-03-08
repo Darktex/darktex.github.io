@@ -1,9 +1,9 @@
 title:            Davide Testuggine
 description:      A personal website
-#logo:             
+#logo:
 disqus_shortname: testuggine
 #Comment out url when working locally to resolve base urls correctly
-url:              http://testuggine.ninja
+#url:              http://testuggine.ninja
 
 # Owner/author information
 owner:
@@ -11,14 +11,14 @@ owner:
   avatar:         my-photo.jpg
   email:          davide@testuggine.ninja
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
+  twitter:
   facebook:       eltexxo
   github:         darktex
-  stackexchange:  
+  stackexchange:
   linkedin:       testuggine
-  instagram:      
-  flickr:         
-  tumblr:         
+  instagram:
+  flickr:
+  tumblr:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:    +DavideTestuggine
 
@@ -59,7 +59,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10

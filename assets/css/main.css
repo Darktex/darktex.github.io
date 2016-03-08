@@ -9,9 +9,9 @@ a.navigation-link:focus{outline:thin dotted #333;outline:5px auto -webkit-focus-
 a.navigation-link:hover,a.navigation-link:active{outline:0;}
 
 a.navigation-link{text-decoration:none;color:#222222;}
-a.navigation-link:visited{color:#222222;}
-a.navigation-link:hover{color:#000000;}
-a.navigation-link:focus{outline:thin dotted;color:#000000;}
+a.navigation-link:visited{color:#ffffff;}
+a.navigation-link:hover{color:#ffffff;}
+a.navigation-link:focus{color:#ffffff;}
 a.navigation-link:hover,a.navigation-link:active{outline:0;}
 
 
