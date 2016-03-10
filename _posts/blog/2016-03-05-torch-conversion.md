@@ -15,7 +15,7 @@ As the field's boom is still quite recent, there has been only little effort in 
 
 However, while these tools are great for some simple applications, they take a very long time to train a good model - we are talking days. The reason why they are so slow is because they use the CPU to do all the calculations. One of the biggest advances in the field and - in my opinion - the biggest enabler for its recent success has been the discovery that graphic cards can be used instead of a CPU for these tasks, and they work __a lot__ faster[^nvidia]. This is an amazing success in itself: a good GPU costs ~300$ and that is already enough to train pretty good models! However, what was missing was the possibility to train a model on a GPU and deploy it so that everyone could use it, without buying or installing anything[^deployment] while also not imposing a cost for the servers to the owner.
 
-The code that I'm releasing today does just that and acts as a bridge between two projects Karpathy made: char-rnn and RecurrentJS. I'm releasing all the code on [my GitHub](https://github.com/Darktex/char-rnn), as well as [a demo](http://testuggine.ninja/Trumpinator/) that I'm confident most will find amusing.
+The code that I'm releasing today does just that and acts as a bridge between two projects Karpathy made: char-rnn and RecurrentJS. I'm releasing all the code on [my GitHub](https://github.com/Darktex/char-rnn)[^disclaimer], as well as [a demo](http://testuggine.ninja/Trumpinator/) that I'm confident most will find amusing.
 
 It runs quite fast (almost instantaneously on the few machines I have tried it on) despite running a decently sized model (the model has two stacked LSTMs, each with 300 units). I also made a mobile version (please remember that it will use the CPU of your phone so you have to be a bit more patient than with the desktop version)[^design].
 
@@ -34,3 +34,4 @@ All in all, this was a fun project. Getting funny quotes does take a while, but 
 [^nvidia]: nVidia [claims](http://www.nvidia.com/object/machine-learning.html) GPUs are usually between 10 and 100 times faster than a CPU.
 [^deployment]: Running a pre-trained model takes a fraction of the time required to train it, so CPUs can do just fine on this task.
 [^design]: You might notice there is a slight difference in design quality between the desktop and the mobile version. For the desktop part, I was helped by a mysterious designer we will call DesignerX. The other is done by me, and I guess it shows.
+[^disclaimer]: An important disclaimer: while I am currently working for Microsoft, they had nothing to do with this project either in terms of opinions or technology. In fact, one of the aims of this project was to gain confidence with non-Microsoft technologies.

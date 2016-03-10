@@ -1,0 +1,826 @@
+<html>
+<head>
+    <title>Drumpfinator</title>
+
+    <script>   (function(){
+
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        var mobile = (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(userAgent)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(userAgent.substr(0,4)));
+
+        // Your mobile URL
+        var mobileURL = 'http://testuggine.ninja/Trumpinator/mobile.html';
+
+        if (mobile) window.location = mobileURL + window.location.search + window.location.hash;
+
+    })(); </script>
+    <script src="//fast.eager.io/wSV4iZc7UK.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42906194-3', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <style>
+
+        .pace-running{
+            background:white;
+        }
+
+
+        body {
+            background: url('Donald-Trump_BG.gif');
+            background-size: cover;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 23%;
+            height:30%
+
+        }
+
+        #instructions {
+            position: absolute;
+            top: 30%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 23%;
+            height:30%;
+            background-color: white;
+        }
+
+        .ui-slider-handle {
+            height: 200%;
+            width: 200%;
+        }
+
+        .talkbubble {
+
+            text-align: left;
+            height:90%;
+            padding: 10px;
+            border-radius: 5px;
+            background: white;
+            /* outer shadows  (note the rgba is red, green, blue, alpha) */
+
+            -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+
+
+            /* rounded corners */
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+
+
+        }
+
+        .talkbubble:after {
+            background-color: white;
+            box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+            content: "\00a0";
+            display: block;
+            height: 15%;
+            width:10%;
+
+            position: absolute;
+            left: -5%;
+            top: 60%;
+            transform:             rotate( 45deg );
+            -moz-transform:    rotate( 45deg );
+            -ms-transform:     rotate( 45deg );
+            -o-transform:      rotate( 45deg );
+            -webkit-transform: rotate( 45deg );
+        }
+
+        .talkbubble textarea {
+
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            margin: 0;
+            padding: 0;
+            font-family:"Arial", Times, serif;
+            font-size: 26px;
+            width: 100%;
+            height:100%;
+            border: none;
+        }
+
+        .donaldslider {
+            text-align: left;
+            height:60%;
+            padding: 10px;
+            border-radius: 5px;
+            background: white;
+            /* outer shadows  (note the rgba is red, green, blue, alpha) */
+
+            -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+
+
+            /* rounded corners */
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+
+        .myfont {
+            font-family:"Arial", Times, serif;
+            font-size: 22px;
+        }
+
+        #predictB {
+            position: relative;
+            right: -70%;
+            width:30%;
+            height:15%;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 3rem;
+            white-space: nowrap;
+        }
+        p {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        #argmax {
+            background-color: #DFD;
+        }
+        #ppl {
+            color: #090;
+            font-size: 20px;
+        }
+        #epoch {
+            color: #900;
+            font-size: 20px;
+        }
+        .apred {
+            padding: 2px;
+            margin: 5px;
+            overflow: hidden;
+            height: 20px;
+            font-size: 14px;
+        }
+        #prepro_status {
+            background-color: #FFD;
+            padding: 5px;
+        }
+        #status {
+            padding: 2px;
+            margin-top: 5px;
+        }
+        #controls {
+            margin: 5px;
+        }
+        .theslider {
+            width:70%;
+            height: 150%;
+            display: inline-block;
+        }
+        .slider_value {
+            width: 9%;
+            display: inline-block;
+        }
+        #wrap {
+            width: 800px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 200px;
+        }
+        .abutton {
+            width: 120px;
+            height: 30px;
+            margin: 10px 10px 10px 0px;
+        }
+        .hh {
+            background-color: #EEE;
+            padding: 5px;
+            margin-top: 5px;
+            border-bottom: 1px solid #999;
+            margin-bottom: 2px;
+        }
+        #pplgraph {
+            float: right;
+        }
+        #intro {
+            text-align: justify;
+        }
+        .typed-cursor{
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <script src="src/recurrent.js"></script>
+    <script src="src/vis.js"></script>
+
+    <script type="text/javascript">
+
+        // prediction params
+        var sample_softmax_temperature = 1.0; // how peaky model predictions should be
+        var max_chars_gen = 300; // max length of generated sentences
+
+        // various global var inits
+        var epoch_size = -1;
+        var input_size = -1;
+        var output_size = -1;
+        var letterToIndex = {};
+        var indexToLetter = {};
+        var vocab = [];
+        var data_sents = [];
+        var solver = new R.Solver(); // should be class because it needs memory for step caches
+        var pplGraph = new Rvis.Graph();
+
+        var model = {};
+
+        var initVocab = function(sents, count_threshold) {
+            // go over all characters and keep track of all unique ones seen
+            var txt = sents.join(''); // concat all
+
+            // count up all characters
+            var d = {};
+            for(var i=0,n=txt.length;i<n;i++) {
+                var txti = txt[i];
+                if(txti in d) { d[txti] += 1; }
+                else { d[txti] = 1; }
+            }
+
+            // filter by count threshold and create pointers
+            letterToIndex = {};
+            indexToLetter = {};
+            vocab = [];
+            // NOTE: start at one because we will have START and END tokens!
+            // that is, START token will be index 0 in model letter vectors
+            // and END token will be index 0 in the next character softmax
+            var q = 1;
+            for(ch in d) {
+                if(d.hasOwnProperty(ch)) {
+                    if(d[ch] >= count_threshold) {
+                        // add character to vocab
+                        letterToIndex[ch] = q;
+                        indexToLetter[q] = ch;
+                        vocab.push(ch);
+                        q++;
+                    }
+                }
+            }
+
+            // globals written: indexToLetter, letterToIndex, vocab (list), and:
+            input_size = vocab.length + 1;
+            output_size = vocab.length + 1;
+            epoch_size = sents.length;
+            //$("#prepro_status").text('found ' + vocab.length + ' distinct characters: ' + vocab.join(''));
+        }
+
+        var utilAddToModel = function(modelto, modelfrom) {
+            for(var k in modelfrom) {
+                if(modelfrom.hasOwnProperty(k)) {
+                    // copy over the pointer but change the key to use the append
+                    modelto[k] = modelfrom[k];
+                }
+            }
+        }
+
+        var initModel = function() {
+            // letter embedding vectors
+            var model = {};
+            model['Wil'] = new R.RandMat(input_size, letter_size , 0, 0.08);
+
+            if(generator === 'rnn') {
+                var rnn = R.initRNN(letter_size, hidden_sizes, output_size);
+                utilAddToModel(model, rnn);
+            } else {
+                var lstm = R.initLSTM(letter_size, hidden_sizes, output_size);
+                utilAddToModel(model, lstm);
+            }
+
+            return model;
+        }
+
+        var reinit_learning_rate_slider = function() {
+            // init learning rate slider for controlling the decay
+            // note that learning_rate is a global variable
+            $("#lr_slider").slider({
+                min: Math.log10(0.01) - 3.0,
+                max: Math.log10(0.01) + 0.05,
+                step: 0.05,
+                value: Math.log10(learning_rate),
+                slide: function( event, ui ) {
+                    learning_rate = Math.pow(10, ui.value);
+                    $("#lr_text").text(learning_rate.toFixed(5));
+                }
+            });
+            $("#lr_text").text(learning_rate.toFixed(5));
+        }
+
+        var reinit = function() {
+            // note: reinit writes global vars
+
+            // eval options to set some globals
+            eval($("#newnet").val());
+
+            reinit_learning_rate_slider();
+
+            solver = new R.Solver(); // reinit solver
+            pplGraph = new Rvis.Graph();
+
+            ppl_list = [];
+            tick_iter = 0;
+
+            // process the input, filter out blanks
+            var data_sents_raw = $('#ti').val().split('\n');
+            data_sents = [];
+            for(var i=0;i<data_sents_raw.length;i++) {
+                var sent = data_sents_raw[i].trim();
+                if(sent.length > 0) {
+                    data_sents.push(sent);
+                }
+            }
+
+            initVocab(data_sents, 1); // takes count threshold for characters
+            model = initModel();
+        }
+
+        var saveModel = function() {
+            var out = {};
+            out['hidden_sizes'] = hidden_sizes;
+            out['generator'] = generator;
+            out['letter_size'] = letter_size;
+            var model_out = {};
+            for(var k in model) {
+                if(model.hasOwnProperty(k)) {
+                    model_out[k] = model[k].toJSON();
+                }
+            }
+            out['model'] = model_out;
+            var solver_out = {};
+            solver_out['decay_rate'] = solver.decay_rate;
+            solver_out['smooth_eps'] = solver.smooth_eps;
+            step_cache_out = {};
+            for(var k in solver.step_cache) {
+                if(solver.step_cache.hasOwnProperty(k)) {
+                    step_cache_out[k] = solver.step_cache[k].toJSON();
+                }
+            }
+            solver_out['step_cache'] = step_cache_out;
+            out['solver'] = solver_out;
+            out['letterToIndex'] = letterToIndex;
+            out['indexToLetter'] = indexToLetter;
+            out['vocab'] = vocab;
+            $("#tio").val(JSON.stringify(out));
+        }
+
+        var loadModel = function(j) {
+            hidden_sizes = j.hidden_sizes;
+            generator = j.generator;
+            letter_size = j.letter_size;
+            model = {};
+            for(var k in j.model) {
+                if(j.model.hasOwnProperty(k)) {
+                    var matjson = j.model[k];
+                    model[k] = new R.Mat(1,1);
+                    model[k].fromJSON(matjson);
+                }
+            }
+            solver = new R.Solver(); // have to reinit the solver since model changed
+            solver.decay_rate = j.solver.decay_rate;
+            solver.smooth_eps = j.solver.smooth_eps;
+            solver.step_cache = {};
+            for(var k in j.solver.step_cache){
+                if(j.solver.step_cache.hasOwnProperty(k)){
+                    var matjson = j.solver.step_cache[k];
+                    solver.step_cache[k] = new R.Mat(1,1);
+                    solver.step_cache[k].fromJSON(matjson);
+                }
+            }
+            letterToIndex = j['letterToIndex'];
+            if ('SINGLEQUOTE' in letterToIndex) {
+                letterToIndex["'"] = letterToIndex["SINGLEQUOTE"];
+                delete letterToIndex["SINGLEQUOTE"];
+            }
+            if ('DOUBLEQUOTE' in letterToIndex) {
+                letterToIndex['"'] = letterToIndex["DOUBLEQUOTE"];
+                delete letterToIndex["DOUBLEQUOTE"];
+            }
+
+            indexToLetter = j['indexToLetter'];
+            if (indexToLetter[letterToIndex["'"]] == "SINGLEQUOTE")
+                indexToLetter[letterToIndex["'"]] = "'";
+            if (indexToLetter[letterToIndex['"']] == "DOUBLEQUOTE")
+                indexToLetter[letterToIndex['"']] = '"';
+            vocab = j['vocab'];
+            if ('SINGLEQUOTE' in vocab) {
+                vocab["'"] = vocab['SINGLEQUOTE'];
+                delete vocab['SINGLEQUOTE'];
+            }
+
+            if ('DOUBLEQUOTE' in vocab) {
+                vocab['"'] = vocab['DOUBLEQUOTE'];
+                delete vocab['DOUBLEQUOTE'];
+            }
+
+            // reinit these
+            ppl_list = [];
+            tick_iter = 0;
+        }
+
+        var forwardIndex = function(G, model, ix, prev) {
+            var x = G.rowPluck(model['Wil'], ix);
+            // forward prop the sequence learner
+            if(generator === 'rnn') {
+                var out_struct = R.forwardRNN(G, model, hidden_sizes, x, prev);
+            } else {
+                var out_struct = R.forwardLSTM(G, model, hidden_sizes, x, prev);
+            }
+            return out_struct;
+        }
+
+        var predictSentence = function(model, samplei, temperature) {
+            if(typeof samplei === 'undefined') { samplei = false; }
+            if(typeof temperature === 'undefined') { temperature = 1.0; }
+
+            var seedText = $('#ti').val();
+            seedText = $.trim(seedText);
+
+            if (isBlank(seedText)) {
+                // If blank, choose a random character
+                // uniformly on the dictionary and use that as seed
+
+                var randomChar =  getRandomInt(0, vocab.length-1);
+                seedText = indexToLetter[randomChar];
+            }
+
+
+
+            var G = new R.Graph(false);
+            var s = '';
+            var prev = {};
+
+            // First stage: consume the seed by running the RNN on it
+            // This will generate a state to sample from
+            for (i = 0; i < seedText.length - 1; i++) {  // The last character of the seedText will be processed later
+
+                // RNN tick
+                var ix = letterToIndex[seedText[i]]; // There is a 1 offset between the two
+                var lh = forwardIndex(G, model, ix, prev);
+                var myprobs = R.softmax(lh.o);
+                var mylogprobs = R.logSoftmax(lh.o);
+                prev = lh;
+
+            }
+
+            s = seedText;
+
+            while(s.length <= max_chars_gen) {
+
+                // RNN tick
+                var ix = s.length === 0 ? 0 : letterToIndex[s[s.length-1]];  // vocab is 1-indexed, matrix is 0-indexed
+                var lh = forwardIndex(G, model, ix, prev);
+                prev = lh;
+                // sample predicted letter
+                logprobs = lh.o;
+                if(temperature !== 1.0 && samplei) {
+                    // scale log probabilities by temperature and renormalize
+                    // if temperature is high, logprobs will go towards zero
+                    // and the softmax outputs will be more diffuse. if temperature is
+                    // very low, the softmax outputs will be more peaky
+                    for(var q=0,nq=logprobs.w.length;q<nq;q++) {
+                        logprobs.w[q] /= temperature;
+                    }
+                }
+
+                probs = R.softmax(logprobs);
+                if(samplei) {
+                    var ix = R.samplei(probs.w);
+                } else {
+                    var ix = R.maxi(probs.w);
+                }
+
+                if(indexToLetter[ix] === "\\n" || indexToLetter[ix] == "\\r") break;
+
+                var letter = indexToLetter[ix];
+                s += letter;
+            }
+            return s;
+        }
+
+        var costfun = function(model, sent) {
+            // takes a model and a sentence and
+            // calculates the loss. Also returns the Graph
+            // object which can be used to do backprop
+            var n = sent.length;
+            var G = new R.Graph();
+            var log2ppl = 0.0;
+            var cost = 0.0;
+            var prev = {};
+            for(var i=-1;i<n;i++) {
+                // start and end tokens are zeros
+                var ix_source = i === -1 ? 0 : letterToIndex[sent[i]]; // first step: start with START token
+                var ix_target = i === n-1 ? 0 : letterToIndex[sent[i+1]]; // last step: end with END token
+
+                lh = forwardIndex(G, model, ix_source, prev);
+                prev = lh;
+
+                // set gradients into logprobabilities
+                logprobs = lh.o; // interpret output as logprobs
+                probs = R.softmax(logprobs); // compute the softmax probabilities
+
+                log2ppl += -Math.log2(probs.w[ix_target]); // accumulate base 2 log prob and do smoothing
+                cost += -Math.log(probs.w[ix_target]);
+
+                // write gradients into log probabilities
+                logprobs.dw = probs.w;
+                logprobs.dw[ix_target] -= 1
+            }
+            var ppl = Math.pow(2, log2ppl / (n - 1));
+            return {'G':G, 'ppl':ppl, 'cost':cost};
+        }
+
+        function median(values) {
+            values.sort( function(a,b) {return a - b;} );
+            var half = Math.floor(values.length/2);
+            if(values.length % 2) return values[half];
+            else return (values[half-1] + values[half]) / 2.0;
+        }
+
+        /**
+         * Returns a random integer between min (inclusive) and max (inclusive)
+         * Using Math.round() will give you a non-uniform distribution!
+         */
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function isBlank(str) {
+            return (!str || /^\s*$/.test(str));
+        }
+
+        var ppl_list = [];
+        var tick_iter = 0;
+        var ppl_list = [];
+        var tick_iter = 0;
+        var tick = function() {
+
+
+            var t0 = +new Date();  // log start timestamp
+
+
+            var t1 = +new Date();
+            var tick_time = t1 - t0;
+
+            // evaluate now and then
+            tick_iter += 1;
+
+            if (tick_iter % 100 == 0 && !isInitialized)
+                loadPretrained();
+        }
+
+        var gradCheck = function() {
+            var model = initModel();
+            var sent = '^test sentence$';
+            var cost_struct = costfun(model, sent);
+            cost_struct.G.backward();
+            var eps = 0.000001;
+
+            for(var k in model) {
+                if(model.hasOwnProperty(k)) {
+                    var m = model[k]; // mat ref
+                    for(var i=0,n=m.w.length;i<n;i++) {
+
+                        oldval = m.w[i];
+                        m.w[i] = oldval + eps;
+                        var c0 = costfun(model, sent);
+                        m.w[i] = oldval - eps;
+                        var c1 = costfun(model, sent);
+                        m.w[i] = oldval;
+
+                        var gnum = (c0.cost - c1.cost)/(2 * eps);
+                        var ganal = m.dw[i];
+                        var relerr = (gnum - ganal)/(Math.abs(gnum) + Math.abs(ganal));
+                        if(relerr > 1e-1) {
+                            console.log(k + ': numeric: ' + gnum + ', analytic: ' + ganal + ', err: ' + relerr);
+                        }
+                    }
+                }
+            }
+        }
+
+        var loadPretrained = function(){
+            $.ajaxSetup({
+                async: false
+            });
+
+            $.getJSON("Trump300-5digits.t7.json", function(data) {
+                pplGraph = new Rvis.Graph();
+                learning_rate = 0.0001;
+                reinit_learning_rate_slider();
+                loadModel(data);
+                isInitialized = true;
+            });
+            $.ajaxSetup({
+                async: true
+            });
+        }
+
+        var makePrediction = function() {
+            if (!isInitialized)
+                return;
+
+            // draw samples
+
+            for(var q=0;q<1;q++) {
+                var pred = predictSentence(model, true, sample_softmax_temperature);
+                return pred;
+            }
+            // draw argmax prediction
+
+
+        }
+
+        var iid = null;
+        var isInitialized = false;
+
+        $(function() {
+
+            // attach button handlers
+            $('#learn').click(function(){
+                reinit();
+                if(iid !== null) { clearInterval(iid); }
+                iid = setInterval(tick, 0);
+            });
+            $('#stop').click(function(){
+                if(iid !== null) { clearInterval(iid); }
+                iid = null;
+            });
+            $("#resume").click(function(){
+                if(iid === null) {
+                    iid = setInterval(tick, 0);
+                }
+            });
+
+            $('#ti').on('keyup', function(e) {
+                if (e.which == 13) {
+                    //$('#runinfo').text('RUNNING');
+                    $("#predictB").click();
+                   // $('#runinfo').text('KEYUP');
+                }
+            });
+
+            $("#predictB").click(function() {
+                //$('#runinfo').text('RUNNING');
+                prediction = makePrediction();
+                $("#ti").val(prediction);
+
+            });
+
+            $("#savemodel").click(saveModel);
+            $("#loadmodel").click(function(){
+                var j = JSON.parse($("#tio").val());
+                loadModel(j);
+            });
+
+
+            $("#learn").click(); // simulate click on startup
+            $("#loadpretrained").click();
+
+
+            //$('#gradcheck').click(gradCheck);
+
+            $("#temperature_slider").slider({
+                min: -1,
+                max: 0,
+                step: 0.02,
+                value: -0.4,
+                slide: function( event, ui ) {
+                    sample_softmax_temperature = Math.pow(10, ui.value);
+                    $("#temperature_text").text( sample_softmax_temperature.toFixed(2) );
+                }
+            });
+
+            $( "#instructionsDiv" ).dialog({
+                autoOpen: false,
+                modal: true,
+                minWidth: 1000
+            });
+
+            $("#instructionsLink").click(function(e) {
+                e.preventDefault();
+                $("#instructionsDiv").dialog("open");
+            });
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+<div id="wrap">
+
+    <div id="content">
+        <div class="talkbubble">
+        <textarea class="talkbubble" id="ti" onfocus="this.value=''">Click here and type to start a sentence, and let DRUMPF-9000 finish it in true Drumpf style!</textarea>
+        <!-- <div id="runinfo">INIT</div> -->
+        </div>
+
+
+    <button id="learn" class="abutton" style="display: none;">learn/restart</button>
+    <button id="resume" class="abutton" style="display: none;">resume</button>
+    <button id="stop" class="abutton" style="display: none;">pause</button>
+
+    <!-- <button id="gradcheck">gradcheck</button> -->
+  <textarea id="newnet" style="width:1px; height: 1px;width: 1px; display:none;">
+
+// model parameters
+generator = 'lstm'; // can be 'rnn' or 'lstm'
+hidden_sizes = [20,20]; // list of sizes of hidden layers
+letter_size = 5; // size of letter embeddings
+
+// optimization
+regc = 0.000001; // L2 regularization strength
+learning_rate = 0.01; // learning rate
+clipval = 5.0; // clip gradients at this value
+  </textarea>
+  <button id="predictB"  class="abutton myfont">Hear me out!</button>
+
+    <div id="status" class="donaldslider">
+
+
+        <div id="controls">
+            <div class="aslider" style="position: relative">
+                <!--div class="slider_header myfont">Temperature slider: lower setting will generate more likely predictions,
+                    but you'll see more of the same common words again and again. Higher setting will generate less
+                    frequent words but you might see more spelling errors.</div-->
+                <br/>
+                <br/>
+                <div style="float:left"><img src="miniTrump.png"/></div>
+                <div class="theslider" id="temperature_slider" style="position:absolute;top:90%;left:25%;width:50%;"></div>
+                <div style="float:right"><img src="bigTrump.png"/></div>
+                <br/>
+                <!-- div class="slider_value" id="temperature_text" style="position:relative;top:50%;left:50%;">0.40</div -->
+                <br/>
+                <span style="clear:both;float:left;"><a id="instructionsLink" class="myfont" href="http://testuggine.ninja/blog/torch-conversion">Instructions</a></span>
+                <span style="float:right;"><a class="myfont" href="http://testuggine.ninja/blog/torch-conversion">The science behind this</a></span>
+            </div>
+        </div>
+        <div id="samples"></div>
+
+    </div>
+    <div id="io">
+        <button id="savemodel" class="abutton" style="display: none;">save model</button>
+        <button id="loadmodel" class="abutton" style="display: none;">load model</button>
+
+        <button id="loadpretrained" class="abutton" style="display: none;">load pretrained</button>
+
+    </div>
+</div>
+</div>
+
+<div id="instructionsDiv" hidden="hidden" title="Instructions"><p>DRUMPF-9000 is an artificial Neural Network that learned to simulate Donald Trump just by reading the transcripts of his campaign speeches. </p>
+    <br/>
+    <p>How it works: write a sentence, and DRUMPF-9000 will finish it for you in true Trump style. </p>
+    <br/>
+    <p>Temperature slider: lower setting will generate more likely predictions,
+        but you'll see more of the same common words again and again. Higher setting will generate less
+        frequent words but you might see more spelling errors.</p>
+    <p>Have you ever wished you had your own personal robot Trump? Now you do!</p>
+</div>
+
+</body>
+</html>
