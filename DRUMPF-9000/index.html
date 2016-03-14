@@ -232,7 +232,8 @@
 
         // prediction params
         var sample_softmax_temperature = 1.0; // how peaky model predictions should be
-        var max_chars_gen = 300; // max length of generated sentences
+        var max_chars_gen = 250; // After these many characters, stop at the first dot.
+        var absolute_max_chars_gen = 400; // max length of generated sentences
 
         // various global var inits
         var epoch_size = -1;
@@ -485,7 +486,7 @@
 
             s = seedText;
 
-            while(s.length <= max_chars_gen) {
+            while(s.length <= absolute_max_chars_gen) {
 
                 // RNN tick
                 var ix = s.length === 0 ? 0 : letterToIndex[s[s.length-1]];  // vocab is 1-indexed, matrix is 0-indexed
@@ -511,6 +512,7 @@
                 }
 
                 if(indexToLetter[ix] === "\\n" || indexToLetter[ix] == "\\r") break;
+                if(s.length >= max_chars_gen && indexToLetter[ix] === ".") break;
 
                 var letter = indexToLetter[ix];
                 s += letter;
@@ -624,7 +626,7 @@
                 async: false
             });
 
-            $.getJSON("Trump300_alt2.json", function(data) {
+            $.getJSON("lm_300_03d_250s_5b_epoch51.31_0.8882.t7.json", function(data) {
                 pplGraph = new Rvis.Graph();
                 learning_rate = 0.0001;
                 reinit_learning_rate_slider();
@@ -774,8 +776,8 @@ clipval = 5.0; // clip gradients at this value
                 <br/>
                 <!-- div class="slider_value" id="temperature_text" style="position:relative;top:50%;left:50%;">0.40</div -->
                 <br/>
-                <span style="clear:both;float:left;"><a id="instructionsLink" class="myfont" href="http://testuggine.ninja/blog/torch-conversion">Instructions</a></span>
-                <span style="float:right;"><a class="myfont" href="http://testuggine.ninja/blog/torch-conversion">The science behind this</a></span>
+                <span style="clear:both;float:left;"><a id="instructionsLink" class="myfont" href="http://testuggine.ninja/blog/trumprnn">Instructions</a></span>
+                <span style="float:right;"><a class="myfont" href="http://testuggine.ninja/blog/trumprnn">The science behind this</a></span>
             </div>
         </div>
         <div id="samples"></div>

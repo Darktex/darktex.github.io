@@ -1,0 +1,85 @@
+---
+layout: post
+category : blog
+tags : [Donald Trump, Machine Learning, Neural Nets, RNN, LSTM]
+title: "DRUMPF-9000, a neural net that runs in your browser and can imitate Donald Drumpf"
+comments: on
+languages: en
+---
+
+This is a fun project I've built in the last couple of months, in my spare time[^disclaimer]. You can see it live here: [DRUMPF-9000](http://drumpf9000.com).
+
+The aim here was mostly to showcase the code I developed to convert a Torch model to JavaScript, of which I talked about [in this other blog post](/blog/torch-conversion). This post provides more detail on how I built this demo, focusing on the machine learning side (if you have tried the demo, I'm sure you realized you have nothing to learn from me about front-end!).
+
+# Context: Recurrent Neural Networks
+
+The model that I have trained is a character-level LSTM (Long short-term memory). You can read about them pretty much anywhere[^lstms], but I'll give an outline here for the uninitiated (including some pointers to resources).
+
+LSTMs are just a particular kind of Recurrent Neural Network (RNN) that's working really well in practice[^rnn]. To quickly outline what a Recurrent Neural Network is, let's take a step back by having a look at a "normal" neural network (deep or shallow, it doesn't matter). For example, this one:
+
+![neuralnet](http://www.texample.net/media/tikz/examples/PNG/neural-network.png)
+
+*Image [source](http://www.texample.net/tikz/examples/neural-network/)*
+
+This network defines a function $$y=f(\vec{x})$$ where $$\vec{x}$$ is a vector of size $$4$$ and $$y$$ is a single number. The fact that the network denotes a mathematical function means that it will always returns the same output for the same input, no matter the context.
+
+This is great, but it won't work for the task of generating words, because we want $$ P(\text{next letter} \mid \text{all previous letters})$$ and a function doesn't really care about the context. What the control theory folks use to do in these cases is to keep around a [state variable](https://en.wikipedia.org/wiki/State_variable) that addresses the problem, but there is no way to fit one inside a neural network once it's trained[^training]. RNNs address this problem through a "hack": since the network can't store a state and depends only on the input, you just pass the state as an input every time[^currying]. This means you draw some loops in your net. The loops aren't too difficult to deal with either, because there is only a finite amount of timesteps you are ever going to do (plus, you can always force it to stop after N steps). So conceptually you can always "unfold" the loop and get a traditional neural net.
+
+![rnn](http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png)
+*Image from Chris Olah's [wonderful blog post](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)*
+
+RNNs have been around for a while, but they have become widely popular only in the recent years for a variety of reasons[^reasons]. The major advantage they have for this task (language modeling) against [N-gram language models](https://en.wikipedia.org/wiki/Language_model) is that they retain more long-term dependencies and don't suffer from combinatorial explosion (well, at least not directly). Andrej Karpathy's [blog post](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) on RNN goes more in-depth with the theory, but it also contains many examples from different domains. [This notebook](http://nbviewer.jupyter.org/gist/yoavg/d76121dfde2618422139) by Yoav Goldberg reproduces the same examples with a N-gram model and it's pretty good at giving an idea of the difference.
+
+#My project: DRUMPF-9000
+
+The aim of this project was to create a character-level language model that was trained on speeches of Donald Trump's, so that we all could have some fun reading what it came up with (obvious things to try are asking it about immigration and walls).
+
+##Getting the data: speeches by Donald Trump
+
+The network was trained only on a bunch of speeches of Donald Trump's that I could find online. If you asked me a few months ago, I thought I would have never said this, but... turns out that Donald Trump doesn't talk enough (well, at least for this task). However, between the speeches I found online and some manual transcription of a few others, I managed to get ~1.5 MB of clean text to train on.
+
+##Hyperparameters search: getting the best model
+
+Hyperparameters are all parameters you are not actually training in the model, such as how big to make the net. This is one of the most intimidating parts for me, as I don't have (yet) years of experience in working with these deep nets and I lack the intuition that experts have when approaching similar problems.
+
+That being said, there are a few guidelines on hyperparameter optimization[^hyperparam], but I think they can be summarized well by a simple guideline: "make the net as big as possible, and then use large dropout[^dropout] to regularize it". This indeed worked fine for this task of modelling language: the best-performing model that I trained has two LSTMs stacked on top of each other, with each having 1000 hidden units, or in short:
+
+$$ letter \rightarrow OneHot(C) \rightarrow LSTM(1000) \rightarrow LSTM(1000) \rightarrow  SoftMax(C) $$
+
+where $$C$$ is the number of different characters we have in the training set (in the case of Trump's speeches, it was around 50. It included uppercase and lowercase letters and a few punctuation symbols) while $$letter$$ is an actual letter from the training set (for example, if $$C=26$$ we would have only lowercase letters in our character dictionary. If $$letter=b$$, then the OneHot vector is a vector that starts with a 0, then has a 1 and then it has 24 0's following it). The SoftMax has $$C$$ elements again, because it contains the probability of each character being the next. So if the first element of the vector has value $$0.042$$ then it means that the character 'a' has that probability of being the next.
+
+For this model, dropout, i.e. the probability that each unit has to be not used for the training of a specific example[^dropout], was set to 0.4. Since the training set contained only ~1.2 million characters and the model contained more than 12 million parameters, I thought higher dropouts would yield better performances but this did not turn out to be true (in fact, the model found no way to train when dropout was too high as the loss ended up going up).
+
+Other important parameters were the maximum sequence length, i.e. the maximum number of timesteps the net was allowed to unroll before stopping and the batch size, i.e. how many examples to evaluate together in a training iteration. For the sequence length, I tried training with the default of 50, but the results became too predictable as the net would never learn any long-term dependencies. Increasing the parameter did not have any negative impact on the accuracy on the validation split, so I increased it all the way to 250 characters even for smaller nets. Batch size was a bit of a surprise for me as it had quite the impact on the training process: batch sizes of 10 (the default) would not allow the loss to go down after a few epochs, but setting the parameter to 1 caused the loss to explode instead of going down and the training to shut down even for medium values of dropout.
+
+The optimization algorithm used was [RMSProp](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)[^rmsprop]. This meant having a few other parameters to optimize for: starting learning rate and another parameter controlling the decay of the squared gradients. Hinton recommends the start learning rate be set to 0.001 as a good default value and the decay be set to 0.9. I have played around with these parameters, but could not see much impact so I sticked to the defaults.
+
+##Hyperparameters search: getting the best model that could run
+
+However, while the biggest model had better results, it could not make it to the live demo. The reason is that it would take way too much time for people to download: the model was 100 MB in binary format (very efficient) and converting it to JSON meant raising the total to 215 MB of model. While it is true that a JSON object will be compressed by the server, that still meant something in the ballpark of the binary file, way too much for GitHub Pages to handle (and for any visitor to wait, especially on mobile!).
+
+Reducing the size of the LSTMs was the most logical step to do, especially because the overall model file size goes down more than quadratically w.r.t. to the LSTM sizes[^lstmsize]. Unfortunately, doing this also meant degrading the model quite significantly. In the end, the best-performing model (both in terms of performance on the validation set and in terms of how good its predictions looked to me on a sample of primetexts) that could fit in the demo was a network with two hidden layers, of size 300 each. Dropout was set to 0.3 and batch size to 5. The maximum number of steps to unroll it for was set to 150. I left the default parameters for RMSProp.
+
+##Wrap up: what I learned
+
+One of the aspects of Deep Learning that fascinates me is its embracing of complexity: these models have so many parameters that they are not intelligible by a human. Indeed, their complexity is what allows them to learn such rich distributed representations, so it's not some side effect we need to cope with. For this reason, I believe that developing an intuition through some practical experience is the best way one can have to really understand the topic. Reading papers and books is great and interesting, but definitely not enough (neither would be the practical experience alone, though. You just need both).
+
+Also, this demo serves as a proof of concept that you can run deploy pretty big models on people's browsers, with them using either their desktop or mobile devices, even if you have the requirement of the models running almost instantaneously. To the best of my knowledge, this is a first: Andrej Karpathy's [demo](http://cs.stanford.edu/people/karpathy/recurrentjs/) trains on CPU so his biggest model is a one-layer LSTM with 100 units, trained in 10 hours. Also, before feeding his data to the LSTM he projects his dictionary to a 5-dimensional vector. This meant the network had ~40,000 parameters. The network that runs in this demo has 1.2 million parameters, and I have tested another one with 3.2 million parameters that still ran successfully online. One of the results of this work is the finding that for this task, the bottleneck is not the CPU's speed but rather the bandwidth of the client (or, in case of mobile, their data limits!). This is an important finding, because it means that even if the total budget in terms of parameters is set, we have little constraints on how deep to make the model so we can still run pretty good models in a browser.
+
+##Future work
+
+I really believe that there is a niche of applications that can run on clients' browsers while having little to no cost to the project owner (just the storage for the model). If there is interest in the hobbyists community, I will expand on this project and create a more generic library that can convert other models, such as convolutional networks. While you probably won't be able to run [Google's Inception Net](http://www.cs.unc.edu/~wliu/papers/GoogLeNet.pdf) I think you should be able to run a pretty good one nonetheless.
+
+Another interesting application would be to apply Hinton's ["Dark knowledge"](https://www.youtube.com/watch?v=EK61htlw8hY) idea to compress a very large model into a smaller one that will then be deployed on the browser. To the best of my knowledge there isn't much work done in this area with sequence models such as LSTMs, so there may be a few interesting directions to try.
+
+
+[^disclaimer]: An important disclaimer: while I am currently working for Microsoft, they had nothing to do with this project either in terms of opinions or technology. In fact, one of the aims of this project was to gain confidence with non-Microsoft technologies.
+[^lstms]: A few pointers: [Karpathy's blog post](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) and [Chris Olah's blog post](http://colah.github.io/posts/2015-08-Understanding-LSTMs/), Richard Socher's lectures ([this one](https://www.youtube.com/watch?v=rFVYTydGLr4) about RNNs in general and [this one](https://www.youtube.com/watch?v=OFCuW8VA7A4) about LSTMs in particular). For the brave, this is [the original paper](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf).
+[^rnn]: They are not the only ones: another common architecture is defined by Gated Recurrent Units (GRUs). [This paper](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf) explains that there is hardly any difference if hyperparameter optimization is done well.
+[^training]: An interpretation of the learning process is indeed that you do keep a state while training the network, which is defined by the very set of weights you are learning. But once that's done and you want to _use_ your model, then there is no state.
+[^reasons]: In short: availability of large data, compute capability of the hardware, and the moving to different non-linearities that do not make the gradients vanish. No nonlinearity is perfect, so the ones currently used may make them explode, but that is more easily fixable through simple gradient clipping ("if the gradient is bigger than 5, then set it back to 5").
+[^hyperparam]: Yoshua Bengio's lab has worked on this problem quite a bit. My favorite papers on the subject are [this](http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf) for general hyperparameter search and [this](http://arxiv.org/pdf/1206.5533v2.pdf) for neural networks in particular.
+[^currying]: The term "hack" is actually not 100% correct here, as this in fact is somehow related to [currying](https://en.wikipedia.org/wiki/Currying).
+[^rmsprop]: This is still unpublished, so what people have been doing is citing the slide in Hinton's Coursera course as he talks about it there.
+[^lstmsize]: To see this, recall that a LSTM is made of 4 gates of size $$H$$ each - the LSTM size. Each of these gates will have a weight matrix whose size is $$C \times H$$ for the first layer, and $$H \times H$$ for each other hidden layer.
+[^dropout]: This is useful as a regularization parameter. Hinton explains it as a way to create an "ensemble" of sorts. Selectively dropping out different units each iteration can be seen as sampling specific model architectures in a huge ensemble (determined by all the combinations of possible active units), with each architecture seeing only one example.
