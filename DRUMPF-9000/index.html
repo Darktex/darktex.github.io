@@ -27,6 +27,67 @@
 
     <style>
 
+        @media only screen and (max-width: 16796px) {
+            .trumpPicDiv {
+                display: none;
+            }
+            #predictB {
+                position: relative;
+                right: -50%;
+                width:50%;
+                height:25%;
+            }
+
+            .myfont {
+                font-family:"Arial", Times, serif;
+                font-size: 20px;
+            }
+            .talkbubble textarea {
+
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                margin: 0;
+                padding: 0;
+                font-family:"Arial", Times, serif;
+                font-size: 20px;
+                width: 100%;
+                height:100%;
+                border: none;
+            }
+        }
+
+        @media only screen and (min-width: 1680px) {
+            .trumpPicDiv {
+                display: inline;
+            }
+            #temperature_slider {
+                top:90%;
+            }
+            #predictB {
+                position: relative;
+                right: -70%;
+                width:30%;
+                height:25%;
+            }
+            .myfont {
+                font-family:"Arial", Times, serif;
+                font-size: 22px;
+            }
+            .talkbubble textarea {
+
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                margin: 0;
+                padding: 0;
+                font-family:"Arial", Times, serif;
+                font-size: 26px;
+                width: 100%;
+                height:100%;
+                border: none;
+            }
+
+        }
+
         .pace-running{
             background:white;
         }
@@ -62,6 +123,7 @@
             height: 200%;
             width: 200%;
         }
+
 
         .talkbubble {
 
@@ -103,22 +165,10 @@
             -webkit-transform: rotate( 45deg );
         }
 
-        .talkbubble textarea {
-
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            margin: 0;
-            padding: 0;
-            font-family:"Arial", Times, serif;
-            font-size: 26px;
-            width: 100%;
-            height:100%;
-            border: none;
-        }
 
         .donaldslider {
             text-align: left;
-            height:60%;
+            height:65%;
             padding: 10px;
             border-radius: 5px;
             background: white;
@@ -135,17 +185,6 @@
             border-radius: 7px;
         }
 
-        .myfont {
-            font-family:"Arial", Times, serif;
-            font-size: 22px;
-        }
-
-        #predictB {
-            position: relative;
-            right: -70%;
-            width:30%;
-            height:15%;
-        }
 
         h1 {
             text-transform: uppercase;
@@ -770,18 +809,19 @@ clipval = 5.0; // clip gradients at this value
                     frequent words but you might see more spelling errors.</div-->
                 <br/>
                 <br/>
-                <div style="float:left"><img src="miniTrump.png"/></div>
-                <div class="theslider" id="temperature_slider" style="position:absolute;top:90%;left:25%;width:50%;"></div>
-                <div style="float:right"><img src="bigTrump.png"/></div>
+                <div style="float:left;" class=trumpPicDiv><img src="miniTrump.png"/></div>
+                <div class="theslider" id="temperature_slider" style="position:absolute;left:25%;width:50%;"></div>
+                <div style="float:right" class=trumpPicDiv><img src="bigTrump.png"/></div>
                 <br/>
                 <!-- div class="slider_value" id="temperature_text" style="position:relative;top:50%;left:50%;">0.40</div -->
                 <br/>
                 <span style="clear:both;float:left;"><a id="instructionsLink" class="myfont" href="http://testuggine.ninja/blog/trumprnn">Instructions</a></span>
-                <span style="float:right;"><a class="myfont" href="http://testuggine.ninja/blog/trumprnn">The science behind this</a></span>
+                <span style="float:right;"><a class="myfont" href="http://testuggine.ninja/blog/trumprnn">Science</a></span>
+                <br/>
             </div>
         </div>
         <div id="samples"></div>
-
+        <br/>
     </div>
     <div id="io">
         <button id="savemodel" class="abutton" style="display: none;">save model</button>
