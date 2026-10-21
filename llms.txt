@@ -1,0 +1,43 @@
+# Davide Testuggine
+
+> Davide Testuggine is a research engineer working on LLM post-training, reinforcement learning, and agentic systems. He led post-training for Llama 3.0, led the team behind Llama Guard, and co-created OpenEnv, an open standard for RL environments.
+
+This file is a plain map of https://testuggine.ninja/ for AI agents and tools. Every page linked here is public.
+
+## Pages
+
+- [About](https://testuggine.ninja/about/): background and selected work.
+- [Writing](https://testuggine.ninja/writing/): posts and articles.
+- [Talks](https://testuggine.ninja/talks/): recorded talks with video.
+- [Publications](https://testuggine.ninja/publications/): selected papers.
+- [RSS feed](https://testuggine.ninja/index.xml)
+
+## Writing
+
+- [A primer on LLM post-training](https://pytorch.org/blog/a-primer-on-llm-post-training/): August 2025, PyTorch blog.
+- [Differential privacy, part 3: per-sample gradients for more layers](https://pytorch.medium.com/differential-privacy-series-part-3-efficient-per-sample-gradient-computation-for-more-layers-in-39bd25df237): November 2022, PyTorch on Medium.
+- [Differential privacy, part 2: efficient per-sample gradients in Opacus](https://medium.com/pytorch/differential-privacy-series-part-2-efficient-per-sample-gradient-computation-in-opacus-5bf4031d9e22): September 2021, PyTorch on Medium.
+- [Differential privacy, part 1: DP-SGD explained](https://medium.com/pytorch/differential-privacy-series-part-1-dp-sgd-algorithm-explained-12512c3959a3): August 2020, PyTorch on Medium.
+
+## Talks
+
+- [Reinforcement learning, agents, and OpenEnv](https://www.youtube.com/watch?v=jMSCJZAEYR8): GPU MODE, RL Mini Conference, January 2026.
+- [Differential privacy on PyTorch](https://www.youtube.com/watch?v=l6fbl2CBnq0): PyTorch Developer Day, November 2020.
+- [Differentially private model training with Opacus](https://www.youtube.com/watch?v=MWPwofiQMdE): OpenMined PriCon, November 2020.
+
+## Publications
+
+- [LogAct: Enabling Agentic Reliability via Shared Logs](https://arxiv.org/abs/2604.07988): arXiv, 2026.
+- [Introducing v0.5 of the AI Safety Benchmark from MLCommons](https://arxiv.org/abs/2404.12241): arXiv, 2024.
+- [The Llama 3 Herd of Models](https://arxiv.org/abs/2407.21783): arXiv, 2024.
+- [Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations](https://arxiv.org/abs/2312.06674): arXiv, 2023.
+- [Are Multimodal Transformers Robust to Missing Modality?](https://arxiv.org/abs/2204.05454): CVPR, 2022.
+- [Opacus: User-Friendly Differential Privacy Library in PyTorch](https://arxiv.org/abs/2109.12298): NeurIPS PriML workshop, 2021.
+- [The Hateful Memes Challenge: Detecting Hate Speech in Multimodal Memes](https://arxiv.org/abs/2005.04790): NeurIPS, 2020.
+- [Supervised Multimodal Bitransformers for Classifying Images and Text](https://arxiv.org/abs/1909.02950): NeurIPS workshops, 2019.
+
+## Elsewhere
+
+- [Google Scholar](https://scholar.google.com/citations?user=VwlihlUAAAAJ)
+- [GitHub](https://github.com/Darktex)
+- [LinkedIn](https://www.linkedin.com/in/testuggine)

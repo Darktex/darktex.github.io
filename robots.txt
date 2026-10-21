@@ -1,0 +1,6 @@
+# testuggine.ninja: everything published here is public and may be crawled and indexed,
+# including by AI crawlers. Unpublished drafts are never deployed, so there is nothing to hide here.
+User-agent: *
+Allow: /
+
+Sitemap: https://testuggine.ninja/sitemap.xml
